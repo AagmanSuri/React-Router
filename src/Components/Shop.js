@@ -1,7 +1,35 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 const Shop = () => {
+  useEffect(() => {
+    FetchUsers();
+  }, []);
+
+  const [users, setUsers] = useState([]);
+
+  const FetchUsers = async () => {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await response.json();
+    // console.log(data[0].name);
+    setUsers(data);
+  };
+  // console.log("uses set ", users);
+
   return (
-    <div className="App">
-      <h1>Shop </h1>
+    <div>
+      <h1>Shop</h1>
+      <br></br>
+      {users.map((value, id) => {
+        return (
+          <div>
+            <Link to="/UserPost">
+              <h3>{value.name}</h3>
+            </Link>
+            <br></br>
+          </div>
+        );
+      })}
     </div>
   );
 };

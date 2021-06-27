@@ -3,6 +3,7 @@ import Nav from "./Components/Nav/Nav";
 import About from "./Components/About";
 import Shop from "./Components/Shop";
 import Home from "./Components/Home";
+import UserPost from "./Components/UserPost";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           {/* Here path is defined to create a route to declare which component to get render*/}
           <Route path="/Shop" component={Shop} />
           <Route path="/About" component={About} />
+          <Route path="/UserPost" component={UserPost} />
         </Switch>
       </div>
     </Router>
