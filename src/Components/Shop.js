@@ -24,7 +24,7 @@ const Shop = () => {
         return (
           <div>
             <Link to="/UserPost">
-              <h3>{value.name}</h3>
+              <h3 key={id}>{value.name}</h3>
             </Link>
             <br></br>
           </div>
