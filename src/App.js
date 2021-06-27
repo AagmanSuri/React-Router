@@ -10,7 +10,7 @@ export default function App() {
       <div className="App">
         <Nav />
         {/* < Route path =Home /> */}
-        {/* Here path is defined to create a route */}
+        {/* Here path is defined to create a route to declare which component to get render*/}
         <Route path="/Shop" component={Shop} />
         <Route path="/About" component={About} />
       </div>
