@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-//import { Link } from "react-router-dom";
 
 const UserPost = ({ match }) => {
   useEffect(() => {
@@ -8,13 +7,21 @@ const UserPost = ({ match }) => {
   const [post, setPost] = useState([]);
 
   const FetchPost = async () => {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/comments`
-    );
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
     const data = await response.json();
     setPost(data);
   };
 
-  return <div></div>;
+  console.log(match);
+  console.log("outter", post);
+
+  return (
+    <div>
+      <h1>Posts</h1>
+      {console.log("inner", post)}
+      <h2>The posts is</h2>
+      <h3>{post[match.params.id].title}</h3>
+    </div>
+  );
 };
 export default UserPost;

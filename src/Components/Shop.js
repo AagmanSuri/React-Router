@@ -23,7 +23,7 @@ const Shop = () => {
       {users.map((value, id) => {
         return (
           <div>
-            <Link to="/UserPost">
+            <Link to={`/shop/${id + 1}`}>
               <h3 key={id}>{value.name}</h3>
             </Link>
             <br></br>
