@@ -9,10 +9,14 @@ export default function App() {
     <Router>
       <div className="App">
         <Nav />
-        {/* < Route path =Home /> */}
-        {/* Here path is defined to create a route to declare which component to get render*/}
-        <Route path="/Shop" component={Shop} />
-        <Route path="/About" component={About} />
+        {/* Switch matches the url and stops  */}
+        <Switch>
+          {/* exact has been intoduced */}
+          <Route path="/" exact component={Home} />
+          {/* Here path is defined to create a route to declare which component to get render*/}
+          <Route path="/Shop" component={Shop} />
+          <Route path="/About" component={About} />
+        </Switch>
       </div>
     </Router>
   );
