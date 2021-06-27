@@ -17,7 +17,7 @@ export default function App() {
           {/* Here path is defined to create a route to declare which component to get render*/}
           <Route path="/Shop" exact component={Shop} />
           <Route path="/About" component={About} />
-          <Route path="/shop/:id" component={UserPost} />
+          <Route path="/Shop/:id" component={UserPost} />
         </Switch>
       </div>
     </Router>
